@@ -1,0 +1,24 @@
+{ env: 'dev',
+  port: 8080,
+  jwt_secret: 'sldgkhoiu58340th0089y',
+  database_uri: 'mongodb://user1:mlabkarma321@ds133533.mlab.com:33533/karma',
+  logging_level: 'debug',
+  authentication_timeout: 36000,
+  portal_cache_timeout: 60,
+  email: { title: 'Test mail from yoga', to: 'ssjkamil@gmail.com' },
+  email_server: { username: 'example@gmail.com', password: 'password' },
+  credentials: { username: 'admin', password: 'admin' } }
+/root/server/server.js:82
+const httpsCredentials = getHttpsCredentials();
+                         ^
+
+ReferenceError: getHttpsCredentials is not defined
+    at Object.<anonymous> (/root/server/server.js:82:26)
+    at Module._compile (internal/modules/cjs/loader.js:778:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:789:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:831:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:623:3)
