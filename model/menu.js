@@ -14,4 +14,4 @@ productSchema.pre('findByIdAndUpdate', function (next) {
         this.options.runValidators = true;
         next();
     });
-module.exports = mongoose.model('Menus', productSchema);
+module.exports = mongoose.model('Menu', productSchema);
