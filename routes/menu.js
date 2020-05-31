@@ -21,7 +21,7 @@ router.post('/:id', authorize(Role.Admin), (req, res, next) => {
 });
 
 // list
-router.get('/', authorize(),(req, res, next) => {
+router.get('/',(req, res, next) => {
     productService.getAll()
         .then(product => res.json(product))
         .catch(err => next(err));
