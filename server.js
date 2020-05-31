@@ -1,4 +1,4 @@
-﻿require('rootpath')();
+﻿﻿require('rootpath')();
 const ApiError = require('./error').ApiError;
 const errorHandler = require('_helpers/error-handler');
 const express = require('express');
@@ -65,7 +65,7 @@ router.get('/validate_token', authMid, function (req, res) {
 // app.use('/api/service', require('./routes/service'));
 // app.use('/api', require('./routes/health'));
 // app.use('/api/carnets', require('./routes/carnets'));
-// app.use('/api/dish', require('./routes/dish'));
+app.use('/api/news', require('./routes/news'));
 app.use('/api/menu', require('./routes/menu'));
 // ERROR HANDLER //////////////////////////////////////////
 
@@ -87,6 +87,3 @@ server.listen(conf.port, () => {
     logger.info(`HTTP${httpsCredentials ? 'S' : ''} server started on port: ${conf.port} with env: ${conf.env}`);
     logger.debug(JSON.stringify(conf, null, 3))
 });
-
-
-

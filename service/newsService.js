@@ -1,15 +1,15 @@
-const Analystic = require("../model/analystic");
+const News = require("../model/news");
 const resolveErrorType = require('../error').resolveErrorType;
 const logger = require('../libs/logger');
 
-const analysticService = {
-    get: (id) => {
+const productService = {
+    getAll: () => {
         return new Promise((resolve, reject) => {
-                Analystic.find()
+            News.find()
                 .then(resolve)
                 .catch(err => reject(err))
         });
-    },
-    };
+    }};
+   
 
-module.exports = analysticService;
+module.exports = productService;
