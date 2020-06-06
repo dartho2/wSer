@@ -79,8 +79,7 @@ router.use((err, req, res, next) => {
 
 app.use('/api', router);
 
-// const httpsCredentials = getHttpsCredentials();
-const httpsCredentials = 0;
+const httpsCredentials = getHttpsCredentials();
 console.log(httpsCredentials);
 const server = httpsCredentials ? https.createServer(credentials, app) : app;
 server.listen(conf.port, () => {
